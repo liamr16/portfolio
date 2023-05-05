@@ -1,0 +1,12 @@
+$primary-color: #8250df;
+
+@import 'animate.css';
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+}
+
+textArea {
+  font-family: 'Helvetica Neue';
+}
