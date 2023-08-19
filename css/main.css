@@ -14,7 +14,99 @@
 html {
   color: #222;
   font-size: 1em;
+
   line-height: 1.4;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+  font-family: "Helvetica", "sans-serif";
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/background.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  flex-wrap: wrap;
+}
+
+#header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(8, 8, 8, 0.9) 50%,
+    rgba(0, 0, 0, 0.98) 100%
+  );
+  z-index: 0;
+}
+
+.container {
+  padding: 10px 10% 10%;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #0076b6;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  position: relative;
+  margin-top: 15%;
+  font-size: 48px;
+  float: right;
+  z-index: 1;
+}
+
+.header-text h1 {
+  margin-top: 15px;
+  font-size: 60px;
+}
+.header-text span {
+  color: #0076b6;
 }
 
 /*
@@ -260,4 +352,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
